@@ -8,10 +8,10 @@ filename=path+'details.h5'
 
 date = " 2014/07/24"
 
-path2 = "../../"
-vidname = path2+'VTS_02_1.VOB'
+path2 = "../"
+vidname = path2+'VTS_01_1.VOB';using the background as the video
 bgvidname = path2+'VTS_01_1.VOB'
-dcvidname = path2+'VTS_22_1.VOB'
+;dcvidname = path2+'VTS_22_1.VOB'
 notes1 = ["Point trap stiffness ",$
         " 1.2um SiO2 spheres in DI water in deep cell",$
         " 447nm Cube holographic illumination",$
@@ -32,7 +32,7 @@ nm = refractiveindex(lambda,temp-273.) ;Medium refractive index
 
 
 
-notes2 = ["Background is in a separate video VTS_01_1.VOB"]
+notes2 = ["using the background as the video VTS_01_1.VOB"]
 ;Start and end frames of video to analyze
 startfrms = [0]
 endfrms = [-1]
@@ -57,7 +57,7 @@ struct = {date:date,$
           notes2:notes2,$
           vidname:vidname,$
           bgvidname:bgvidname,$
-          dcvidname:dcvidname,$
+          ;dcvidname:dcvidname,$
           ap:ap,$
           np:np,$
           lambda:lambda,$

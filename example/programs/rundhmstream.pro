@@ -27,7 +27,7 @@ roi =     details.roi
 
 vidname =   details.vidname
 bgvidname = details.bgvidname
-dcvidname = details.dcvidname
+;dcvidname = details.dcvidname
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;Combining Data into one folder of frames;;;;;;;
@@ -56,7 +56,7 @@ endif
 f = file_search("../vid"+vob+"_*frames"+"/*/*/*.gdf")
 a = (read_gdf(f[1]))[5:644,*]
 write_image,"../frame1.png","png",a
-stop
+
 ;;;;;;;;;;;;;;;;;;;;;;;Getting backgrounds
 ;Check if the bg video is ripped
 bgvob = (strsplit(bgvidname,"_",/extract))[1]
