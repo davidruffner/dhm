@@ -45,7 +45,7 @@ if f[0] eq '' then begin $
    foreach vidname,vidnames do begin $
       print,"ripping "+vidname & $
       parts = strsplit(vidname,"_.",/extract) & $
-      fname="../vid"+parts[2]+"_"+parts[3]+"frames" & $
+      fname="../vid"+parts[1]+"_"+parts[2]+"frames" & $
       mp_ripper,vidname,fname,dimensions = [w,h], /greyscale & $
    endforeach & $
 endif
@@ -131,9 +131,10 @@ print,"moving on"
 dc = 32.;Check this number!
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;Analyzing data
-featurethreshold=100
+featurethreshold=10
 zp = 108.
 rad=zp*tan(35*!pi/180.)<180
+print,"rad",rad
 pickn=1
 tag = ""
 startfrms = details.startfrms
@@ -156,7 +157,7 @@ for i=0,nparts-1 do begin $
                 pickn=pickn,dc=dc) & $
 endfor
 
-
+stop
 
 
 

@@ -251,7 +251,8 @@ for n=startfrm,endframe do begin
      thisp = reform(thisp,2,9,npts) 
      zp = thisp[0,2,0]
      ;adjust radius baised on z height
-     rad = (thisp[0,2,0]*tan(30*!pi/180.)>30)<180
+     rad = (thisp[0,2,0]*tan(35*!pi/180.)>30)<180
+     print,rad 
      ;print, thisp & $
      if doshow then plots, thisp[0, 0, *], thisp[0, 1, *], psym = circ() 
      p = [[[p]], [[thisp]]] 
