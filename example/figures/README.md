@@ -1,0 +1,1 @@
+This folder contains the figures created by the video analysis code
